@@ -21,7 +21,7 @@ public class CourseService {
     }
 
     public Course getCourseById(Long courseId) {
-        return courseRepository.getReferenceById(courseId);
+        return courseRepository.findById(courseId).get();
     }
 
     public Course updateCourse(Course course) {
